@@ -1,0 +1,25 @@
+﻿@model MoviewShop.ViewModels.ShowAllMoviesViewModel
+@{
+    ViewBag.Title = "ShowAllMovies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ShowAllMovies</h2>
+
+@if (!(Model.Movies.Count == 0))
+{
+    <table>
+        <thead><h3>Movies</h3></thead>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td><a href="MoviePage/@movie.Id">@movie.Name</a></td>
+            </tr>
+        }
+    </table>
+
+}
+else
+{
+    <h3>We don't have any movies yet</h3>
+}
