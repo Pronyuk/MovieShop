@@ -10,15 +10,22 @@ namespace MoviewShop.Controllers
 {
     public class CustomersController : Controller
     {
-        List<Customer> customers = new List<Customer>()
-            {
-                new Customer() { Id = 1, Name = "John Smith"},
-                new Customer() { Id = 2, Name = "Mary Williams" }
-            };
-
         // GET: Customers
+        private ApplicationDbContext _context { get; set; }
+
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposign)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult ShowAllCutomers()
         {
+            var customers = _context.Customers.ToList();
             var viewModel = new ShowAllCustomersViewModel()
             {
                 Customers = customers
@@ -29,7 +36,7 @@ namespace MoviewShop.Controllers
         //[Route()]
         public ActionResult CustomerPage(int Id)
         {
-            var customer = customers.FirstOrDefault((c) => c.Id == Id);
+            var customer = _context.Customers.SingleOrDefault((c) => c.Id == Id);
             if (customer != null)
             {
                 return View(customer);

@@ -175,10 +175,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708200921076_InitioalModel.cs" />
+    <Compile Include="Migrations\201708200921076_InitioalModel.Designer.cs">
+      <DependentUpon>201708200921076_InitioalModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200932528_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201708200932528_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201708200932528_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200938092_AddMembeshipType.cs" />
+    <Compile Include="Migrations\201708200938092_AddMembeshipType.Designer.cs">
+      <DependentUpon>201708200938092_AddMembeshipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200940246_AddMembeshipType1.cs" />
+    <Compile Include="Migrations\201708200940246_AddMembeshipType1.Designer.cs">
+      <DependentUpon>201708200940246_AddMembeshipType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708200951045_populatemembershiptypes.cs" />
+    <Compile Include="Migrations\201708200951045_populatemembershiptypes.Designer.cs">
+      <DependentUpon>201708200951045_populatemembershiptypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201007390_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201708201007390_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201708201007390_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -259,6 +285,26 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708200921076_InitioalModel.resx">
+      <DependentUpon>201708200921076_InitioalModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200932528_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201708200932528_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200938092_AddMembeshipType.resx">
+      <DependentUpon>201708200938092_AddMembeshipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200940246_AddMembeshipType1.resx">
+      <DependentUpon>201708200940246_AddMembeshipType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708200951045_populatemembershiptypes.resx">
+      <DependentUpon>201708200951045_populatemembershiptypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201007390_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201708201007390_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
