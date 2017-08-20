@@ -4,16 +4,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ShowAllMovies</h2>
+<h2>All Movies</h2>
 
 @if (!(Model.Movies.Count == 0))
 {
-    <table>
-        <thead><h3>Movies</h3></thead>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Movies</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
         @foreach (var movie in Model.Movies)
         {
             <tr>
                 <td><a href="MoviePage/@movie.Id">@movie.Name</a></td>
+                <td>@movie.Genre.Name</td>
             </tr>
         }
     </table>

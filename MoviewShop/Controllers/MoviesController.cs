@@ -1,5 +1,6 @@
 ﻿using MoviewShop.Models;
 using MoviewShop.ViewModels;
+using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,17 @@ namespace MoviewShop.Controllers
 {
     public class MoviesController : Controller
     {
-        List<Movie> movies = new List<Movie>()
-        {
-            new Movie() { Id = 1, Name = "Incredable" },
-            new Movie() { Id = 2, Name = "Best of 5" }
-        };
+        private ApplicationDbContext _context { get; set; }
 
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Movies
         public ActionResult Random()
         {
@@ -54,19 +60,19 @@ namespace MoviewShop.Controllers
         {
             var viewModel = new ShowAllMoviesViewModel()
             {
-                Movies = movies
+                Movies = _context.Movies.Include((m) => m.Genre).ToList()
             };
             return View(viewModel);
         }
 
         public ActionResult MoviePage(int Id)
         {
-            var movie = movies.FirstOrDefault((c) => c.Id == Id);
-            if (movies != null)
+            var movies = _context.Movies.ToList();
+            var movie = movies.SingleOrDefault((c) => c.Id == Id);
+            if (movies.Count != 0)
             {
                 return View(movie);
             }
-
             else
             {
                 return HttpNotFound();

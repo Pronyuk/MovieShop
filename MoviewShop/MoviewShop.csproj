@@ -219,6 +219,34 @@
     <Compile Include="Migrations\201708201308445_CustomerBirthDayFormat.Designer.cs">
       <DependentUpon>201708201308445_CustomerBirthDayFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708201333031_AddGenre.cs" />
+    <Compile Include="Migrations\201708201333031_AddGenre.Designer.cs">
+      <DependentUpon>201708201333031_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201446367_AddGenre1.cs" />
+    <Compile Include="Migrations\201708201446367_AddGenre1.Designer.cs">
+      <DependentUpon>201708201446367_AddGenre1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201455085_AddGenre2.cs" />
+    <Compile Include="Migrations\201708201455085_AddGenre2.Designer.cs">
+      <DependentUpon>201708201455085_AddGenre2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201457321_AddGenresToGenreTable.cs" />
+    <Compile Include="Migrations\201708201457321_AddGenresToGenreTable.Designer.cs">
+      <DependentUpon>201708201457321_AddGenresToGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201530044_CheckAddGenres.cs" />
+    <Compile Include="Migrations\201708201530044_CheckAddGenres.Designer.cs">
+      <DependentUpon>201708201530044_CheckAddGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201545186_ExtendMovieVithReaseleDateDateAddedNumberInStock.cs" />
+    <Compile Include="Migrations\201708201545186_ExtendMovieVithReaseleDateDateAddedNumberInStock.Designer.cs">
+      <DependentUpon>201708201545186_ExtendMovieVithReaseleDateDateAddedNumberInStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201549374_FixErrorInPrevMigration.cs" />
+    <Compile Include="Migrations\201708201549374_FixErrorInPrevMigration.Designer.cs">
+      <DependentUpon>201708201549374_FixErrorInPrevMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -226,6 +254,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -339,6 +368,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708201308445_CustomerBirthDayFormat.resx">
       <DependentUpon>201708201308445_CustomerBirthDayFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201333031_AddGenre.resx">
+      <DependentUpon>201708201333031_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201446367_AddGenre1.resx">
+      <DependentUpon>201708201446367_AddGenre1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201455085_AddGenre2.resx">
+      <DependentUpon>201708201455085_AddGenre2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201457321_AddGenresToGenreTable.resx">
+      <DependentUpon>201708201457321_AddGenresToGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201530044_CheckAddGenres.resx">
+      <DependentUpon>201708201530044_CheckAddGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201545186_ExtendMovieVithReaseleDateDateAddedNumberInStock.resx">
+      <DependentUpon>201708201545186_ExtendMovieVithReaseleDateDateAddedNumberInStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201549374_FixErrorInPrevMigration.resx">
+      <DependentUpon>201708201549374_FixErrorInPrevMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
