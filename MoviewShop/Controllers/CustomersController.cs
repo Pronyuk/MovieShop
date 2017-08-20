@@ -1,6 +1,7 @@
 ﻿using MoviewShop.Models;
 using MoviewShop.ViewModels;
 using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,7 +26,7 @@ namespace MoviewShop.Controllers
 
         public ActionResult ShowAllCutomers()
         {
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include((c) => c.MembershipType).ToList();
             var viewModel = new ShowAllCustomersViewModel()
             {
                 Customers = customers
@@ -36,7 +37,7 @@ namespace MoviewShop.Controllers
         //[Route()]
         public ActionResult CustomerPage(int Id)
         {
-            var customer = _context.Customers.SingleOrDefault((c) => c.Id == Id);
+            var customer = _context.Customers.Include((a) => a.MembershipType).SingleOrDefault((c) => c.Id == Id);
             if (customer != null)
             {
                 return View(customer);

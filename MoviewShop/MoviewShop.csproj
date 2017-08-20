@@ -199,6 +199,26 @@
     <Compile Include="Migrations\201708201007390_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201708201007390_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708201232526_NameToMembershipType.cs" />
+    <Compile Include="Migrations\201708201232526_NameToMembershipType.Designer.cs">
+      <DependentUpon>201708201232526_NameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201233477_UpdateNameOfMembershipType.cs" />
+    <Compile Include="Migrations\201708201233477_UpdateNameOfMembershipType.Designer.cs">
+      <DependentUpon>201708201233477_UpdateNameOfMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201248519_UpdateNameOfMembershipType1.cs" />
+    <Compile Include="Migrations\201708201248519_UpdateNameOfMembershipType1.Designer.cs">
+      <DependentUpon>201708201248519_UpdateNameOfMembershipType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201258454_AddBirthdayToCustomer.cs" />
+    <Compile Include="Migrations\201708201258454_AddBirthdayToCustomer.Designer.cs">
+      <DependentUpon>201708201258454_AddBirthdayToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708201308445_CustomerBirthDayFormat.cs" />
+    <Compile Include="Migrations\201708201308445_CustomerBirthDayFormat.Designer.cs">
+      <DependentUpon>201708201308445_CustomerBirthDayFormat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -304,6 +324,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708201007390_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201708201007390_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201232526_NameToMembershipType.resx">
+      <DependentUpon>201708201232526_NameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201233477_UpdateNameOfMembershipType.resx">
+      <DependentUpon>201708201233477_UpdateNameOfMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201248519_UpdateNameOfMembershipType1.resx">
+      <DependentUpon>201708201248519_UpdateNameOfMembershipType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201258454_AddBirthdayToCustomer.resx">
+      <DependentUpon>201708201258454_AddBirthdayToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201308445_CustomerBirthDayFormat.resx">
+      <DependentUpon>201708201308445_CustomerBirthDayFormat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
