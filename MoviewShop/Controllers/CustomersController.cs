@@ -24,6 +24,25 @@ namespace MoviewShop.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            var membershiptypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel()
+            {
+                MembershipTypes = membershiptypes
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("ShowAllCutomers", "Customers");
+        }
+
         public ActionResult ShowAllCutomers()
         {
             var customers = _context.Customers.Include((c) => c.MembershipType).ToList();
